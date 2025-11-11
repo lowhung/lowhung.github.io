@@ -195,11 +195,13 @@
             font-weight: 700;
             letter-spacing: -0.03em;
             color: #fff;
+            min-height: 2.4rem;
         }
 
         @media (max-width: 640px) {
             h1 {
                 font-size: 1.5rem;
+                min-height: 1.8rem;
             }
         }
 
@@ -209,12 +211,14 @@
             margin-bottom: 1.5rem;
             font-weight: 400;
             line-height: 1.8;
+            min-height: 2.1rem; /* Ensures consistent height */
         }
 
         @media (max-width: 640px) {
             h2 {
                 font-size: 1rem;
                 line-height: 1.6;
+                min-height: 1.8rem;
             }
         }
 
@@ -686,59 +690,15 @@
             opacity: 0.05;
         }
 
-        /* Typing animation for hero */
-        .typing-text {
-            overflow: hidden;
-            white-space: nowrap;
-            animation: typing 2s steps(40) 0.5s forwards;
-            max-width: 0;
-            display: inline-block;
-        }
-
-        .typing-text-subtitle {
-            overflow: hidden;
-            white-space: nowrap;
-            animation: typing-subtitle 3s steps(60) 2.7s forwards;
-            max-width: 0;
-            display: inline-block;
-        }
-
-        @keyframes typing {
-            from {
-                max-width: 0;
-            }
-            to {
-                max-width: 100%;
-            }
-        }
-
-        @keyframes typing-subtitle {
-            from {
-                max-width: 0;
-            }
-            to {
-                max-width: 100%;
-            }
-        }
-
-        .typing-text.typed,
-        .typing-text-subtitle.typed {
-            max-width: 100%;
-        }
-
-        /* Blinking cursor */
+        /* Typing cursor */
         .typing-cursor {
             display: inline-block;
-            width: 0.6em;
+            width: 3px;
             height: 1.2em;
             background-color: #6eb5ff;
-            margin-left: 0.1em;
-            animation: blink 0.75s step-end infinite;
             vertical-align: text-bottom;
-        }
-
-        .typing-cursor.hide {
-            display: none;
+            animation: blink 0.75s step-end infinite;
+            margin-left: 2px;
         }
 
         /* Terminal boot sequence */
@@ -854,6 +814,19 @@
         .project-link:hover {
             box-shadow: 0 0 10px currentColor;
         }
+
+        /* Hidden initially for typing animation */
+        .typing-text {
+            visibility: hidden;
+        }
+
+        .typing-text-subtitle {
+            visibility: hidden;
+        }
+
+        .prompt {
+            color: #888;
+        }
     </style>
 </head>
 <body>
@@ -892,11 +865,12 @@
     <main>
         <section class="hero">
             <h1>
-                <span class="typing-text"><span class="prompt">~</span> hi, i'm matt</span><span class="typing-cursor"
-                                                                                                 id="typingCursor"></span>
+                <span id="typing-title"></span><span id="cursor-title" class="typing-cursor"
+                                                     style="display: none;"></span>
             </h1>
             <h2>
-                <span class="typing-text-subtitle">i build blockchain infrastructure to support <span class="highlight">individual sovereignty</span></span>
+                <span id="typing-subtitle"></span><span id="cursor-subtitle" class="typing-cursor"
+                                                        style="display: none;"></span>
             </h2>
             <p class="social-links">
                 <span>→ connect with me :3</span>
@@ -1126,6 +1100,19 @@
 </div>
 
 <script>
+    // Typing animation function
+    function typeText(element, text, speed, callback) {
+        let index = 0;
+        const interval = setInterval(() => {
+            element.textContent = text.substring(0, index + 1);
+            index++;
+            if (index >= text.length) {
+                clearInterval(interval);
+                if (callback) callback();
+            }
+        }, speed);
+    }
+
     // Load stats when page loads
     window.addEventListener('DOMContentLoaded', () => {
         // Boot sequence
@@ -1136,15 +1123,55 @@
             }, 500);
         }, 2000);
 
-        // Typing animation - hide cursor after both lines are typed
-        const typingCursor = document.getElementById('typingCursor');
+        // Typing animation
+        const titleElement = document.getElementById('typing-title');
+        const titleCursor = document.getElementById('cursor-title');
+        const subtitleElement = document.getElementById('typing-subtitle');
+        const subtitleCursor = document.getElementById('cursor-subtitle');
 
-        if (typingCursor) {
-            // Hide cursor after subtitle finishes typing (2s boot + 0.5s delay + 2s title + 0.2s pause + 3s subtitle)
-            setTimeout(() => {
-                typingCursor.classList.add('hide');
-            }, 5700);
-        }
+        const titleText = '~ hi, i\'m matt';
+        const subtitleText = 'i build blockchain infrastructure to support ';
+        const highlightText = 'individual sovereignty';
+
+        // Start typing after boot sequence
+        setTimeout(() => {
+            // Show title cursor and start typing
+            titleCursor.style.display = 'inline-block';
+            typeText(titleElement, titleText, 80, () => {
+                // After title is done, hide title cursor and show subtitle cursor
+                setTimeout(() => {
+                    titleCursor.style.display = 'none';
+                    subtitleCursor.style.display = 'inline-block';
+
+                    // Type subtitle
+                    let index = 0;
+                    const fullText = subtitleText + highlightText;
+
+                    const typeSubtitle = setInterval(() => {
+                        if (index <= fullText.length) {
+                            if (index <= subtitleText.length) {
+                                // Still typing the non-highlighted part
+                                subtitleElement.innerHTML = fullText.substring(0, index);
+                            } else {
+                                // Typing the highlighted part
+                                const highlightedChars = index - subtitleText.length;
+                                subtitleElement.innerHTML = subtitleText +
+                                    '<span class="highlight">' +
+                                    highlightText.substring(0, highlightedChars) +
+                                    '</span>';
+                            }
+                            index++;
+                        } else {
+                            clearInterval(typeSubtitle);
+                            // Hide cursor after typing is done
+                            setTimeout(() => {
+                                subtitleCursor.style.display = 'none';
+                            }, 1000);
+                        }
+                    }, 50);
+                }, 300);
+            });
+        }, 2200);
     });
 </script>
 </body>
