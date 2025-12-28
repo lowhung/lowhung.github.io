@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#eff1f5" />
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+
+        <!-- Primary Meta Tags -->
+        <title>generative art | matt hounslow</title>
+        <meta name="title" content="generative art | matt hounslow" />
+        <meta
+            name="description"
+            content="generative art created with engram - a rust-based generative art system"
+        />
+        <meta name="author" content="Matt Hounslow" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="generative art | matt hounslow" />
+        <meta
+            property="og:description"
+            content="generative art created with engram - a rust-based generative art system"
+        />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="generative art | matt hounslow" />
+        <meta
+            property="twitter:description"
+            content="generative art created with engram - a rust-based generative art system"
+        />
+        <meta property="twitter:creator" content="@l0whung" />
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap");
+
+            @font-face {
+                font-family: "iA Writer Quattro";
+                font-style: normal;
+                font-display: swap;
+                font-weight: 400;
+                src:
+                    url(https://cdn.jsdelivr.net/fontsource/fonts/ia-writer-quattro@latest/latin-400-normal.woff2)
+                        format("woff2"),
+                    url(https://cdn.jsdelivr.net/fontsource/fonts/ia-writer-quattro@latest/latin-400-normal.woff)
+                        format("woff");
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family:
+                    "iA Writer Quattro",
+                    -apple-system,
+                    "system-ui",
+                    "Segoe UI",
+                    Roboto,
+                    "Helvetica Neue",
+                    Arial,
+                    "Noto Sans",
+                    sans-serif;
+                background-color: #eff1f5;
+                color: #4c4f69;
+                line-height: 1.6;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .container {
+                max-width: 52rem;
+                margin: 0 auto;
+                padding: 1.5rem;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+
+            @media (max-width: 640px) {
+                .container {
+                    padding: 1rem;
+                }
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 2rem;
+                padding-bottom: 0.75rem;
+                border-bottom: 1px solid #ccd0da;
+            }
+
+            @media (max-width: 640px) {
+                header {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .logo {
+                font-size: 1.125rem;
+                color: #4c4f69;
+                text-decoration: none;
+                font-weight: 600;
+                letter-spacing: -0.02em;
+            }
+
+            @media (max-width: 640px) {
+                .logo {
+                    font-size: 1rem;
+                }
+            }
+
+            .logo .prompt {
+                color: #8c8fa1;
+                margin-right: 0.25rem;
+            }
+
+            .menu-container {
+                position: relative;
+            }
+
+            #menu-toggle {
+                display: none;
+            }
+
+            .menu-label {
+                color: #6c6f85;
+                cursor: pointer;
+                padding: 0.5rem 0.75rem;
+                transition: all 0.2s;
+                border-radius: 0;
+                font-size: 0.875rem;
+                border: 1px solid transparent;
+            }
+
+            @media (max-width: 640px) {
+                .menu-label {
+                    padding: 0.375rem 0.5rem;
+                    font-size: 0.8125rem;
+                }
+            }
+
+            .menu-label:hover,
+            #menu-toggle:checked + .menu-label {
+                background-color: transparent;
+                color: #4c4f69;
+                border-color: #acb0be;
+            }
+
+            .menu-dropdown {
+                position: absolute;
+                right: 0;
+                top: 100%;
+                padding-top: 0.5rem;
+                background-color: transparent;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+                display: none;
+                z-index: 50;
+                min-width: 140px;
+            }
+
+            .menu-dropdown ul {
+                background-color: #e6e9ef;
+                border: 1px solid #acb0be;
+                list-style: none;
+                padding: 0;
+            }
+
+            #menu-toggle:checked ~ .menu-dropdown,
+            .menu-container:hover .menu-dropdown {
+                display: block;
+            }
+
+            .menu-dropdown a {
+                display: block;
+                padding: 0.5rem 0.75rem;
+                color: #5c5f77;
+                text-decoration: none;
+                text-align: right;
+                transition: all 0.2s;
+                border-radius: 0;
+                font-size: 0.875rem;
+                border-bottom: 1px solid #ccd0da;
+            }
+
+            .menu-dropdown a:last-child {
+                border-bottom: none;
+            }
+
+            .menu-dropdown a:hover {
+                background-color: #ccd0da;
+                color: #4c4f69;
+            }
+
+            main {
+                flex: 1;
+            }
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 0.75rem;
+                font-weight: 700;
+                letter-spacing: -0.03em;
+                color: #4c4f69;
+            }
+
+            @media (max-width: 640px) {
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                font-weight: 700;
+                letter-spacing: -0.02em;
+                color: #4c4f69;
+                text-shadow: 0 0 5px rgba(136, 57, 239, 0.15);
+            }
+
+            @media (max-width: 640px) {
+                .section-title {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .section-title .hash {
+                color: #8c8fa1;
+                margin-right: 0.5rem;
+                font-weight: 400;
+            }
+
+            .page-intro {
+                margin-bottom: 2rem;
+            }
+
+            .page-intro p {
+                color: #5c5f77;
+                font-size: 1rem;
+                margin-bottom: 1rem;
+                font-family: "Roboto Mono", monospace;
+            }
+
+            .page-intro a {
+                color: #8839ef;
+                text-decoration: none;
+                border-bottom: 1px solid transparent;
+                transition: border-color 0.2s;
+            }
+
+            .page-intro a:hover {
+                border-bottom-color: #8839ef;
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.5rem;
+                margin-bottom: 3rem;
+            }
+
+            @media (max-width: 640px) {
+                .gallery {
+                    grid-template-columns: 1fr;
+                    gap: 1rem;
+                }
+            }
+
+            .art-item {
+                border: 1px solid #ccd0da;
+                padding: 0.75rem;
+                transition: all 0.2s;
+                background-color: transparent;
+            }
+
+            .art-item:hover {
+                border-color: #acb0be;
+                background-color: #e6e9ef;
+            }
+
+            .art-item img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .art-item .art-label {
+                margin-top: 0.5rem;
+                font-size: 0.75rem;
+                color: #6c6f85;
+                font-family: "Roboto Mono", monospace;
+                text-align: center;
+            }
+
+            footer {
+                padding-top: 3rem;
+                margin-top: 1rem;
+                border-top: 1px solid #ccd0da;
+                display: flex;
+                justify-content: space-between;
+                opacity: 0.6;
+            }
+
+            @media (max-width: 640px) {
+                footer {
+                    padding-top: 2rem;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    text-align: center;
+                }
+            }
+
+            footer p {
+                color: #6c6f85;
+                font-size: 0.8125rem;
+            }
+
+            .prompt {
+                color: #8c8fa1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <a href="/" class="logo">
+                    <span class="prompt">~</span>matt hounslow
+                </a>
+                <div class="menu-container">
+                    <input type="checkbox" id="menu-toggle" />
+                    <label for="menu-toggle" class="menu-label">menu</label>
+                    <div class="menu-dropdown">
+                        <ul>
+                            <li><a href="/">home</a></li>
+                            <li><a href="/art.html">art</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <section class="page-intro">
+                    <h1 class="section-title">
+                        <span class="hash">#</span> generative art
+                    </h1>
+                    <p>
+                        procedurally generated artwork created with
+                        <a href="https://github.com/lowhung/engram" target="_blank">engram</a>,
+                        a rust-based generative art system i built. each piece is derived
+                        from a unique seed value, creating infinite variations of geometric
+                        compositions using the catppuccin color palette.
+                    </p>
+                </section>
+
+                <div class="gallery">
+                    <div class="art-item">
+                        <img src="art/engram_1.svg" alt="engram #1" />
+                        <p class="art-label">seed: 1</p>
+                    </div>
+                    <div class="art-item">
+                        <img src="art/engram_2.svg" alt="engram #2" />
+                        <p class="art-label">seed: 2</p>
+                    </div>
+                    <div class="art-item">
+                        <img src="art/engram_3.svg" alt="engram #3" />
+                        <p class="art-label">seed: 3</p>
+                    </div>
+                    <div class="art-item">
+                        <img src="art/engram_5.svg" alt="engram #5" />
+                        <p class="art-label">seed: 5</p>
+                    </div>
+                    <div class="art-item">
+                        <img src="art/engram_8.svg" alt="engram #8" />
+                        <p class="art-label">seed: 8</p>
+                    </div>
+                    <div class="art-item">
+                        <img src="art/engram_10.svg" alt="engram #10" />
+                        <p class="art-label">seed: 10</p>
+                    </div>
+                    <div class="art-item">
+                        <img src="art/engram_11.svg" alt="engram #11" />
+                        <p class="art-label">seed: 11</p>
+                    </div>
+                    <div class="art-item">
+                        <img src="art/engram_12.svg" alt="engram #12" />
+                        <p class="art-label">seed: 12</p>
+                    </div>
+                    <div class="art-item">
+                        <img src="art/engram_42.svg" alt="engram #42" />
+                        <p class="art-label">seed: 42</p>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <p>© 2025</p>
+                <p>built with care</p>
+            </footer>
+        </div>
+    </body>
+</html>
