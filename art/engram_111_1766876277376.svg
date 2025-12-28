@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 774 774" width="774" height="774">
+  <rect width="100%" height="100%" fill="#181825"/>
+  <path d="M 434.7 455.7 Q 351.7 313.5 197.6 255.4" fill="none" stroke="#89dceb" stroke-width="2.87" stroke-linecap="round"/>
+<path d="M 459.9 441.6 Q 469.4 330.8 426.7 228.0" fill="none" stroke="#89dceb" stroke-width="2.87" stroke-linecap="round"/>
+<path d="M 340.5 353.4 Q 449.7 340.6 516.9 427.5" fill="none" stroke="#1e1e2e" stroke-width="2.63" stroke-linecap="round"/>
+<path d="M 340.0 321.9 Q 437.2 226.1 573.2 215.3" fill="none" stroke="#1e1e2e" stroke-width="2.63" stroke-linecap="round"/>
+<path d="M 178.9 559.5 Q 220.5 412.9 167.6 270.1" fill="none" stroke="#89dceb" stroke-width="3.11" stroke-linecap="round"/>
+<path d="M 185.9 265.0 Q 191.6 365.7 273.5 424.5" fill="none" stroke="#74c7ec" stroke-width="2.87" stroke-linecap="round"/>
+<path d="M 206.1 569.5 Q 271.2 573.0 263.1 508.3" fill="none" stroke="#89dceb" stroke-width="3.36" stroke-linecap="round"/>
+<path d="M 215.4 583.1 Q 348.9 608.4 427.9 497.8" fill="none" stroke="#89dceb" stroke-width="3.11" stroke-linecap="round"/>
+<path d="M 196.7 563.1 Q 305.4 498.7 287.4 373.6" fill="none" stroke="#89dceb" stroke-width="2.99" stroke-linecap="round"/>
+<path d="M 179.5 559.4 Q 264.8 456.3 174.5 357.5" fill="none" stroke="#89dceb" stroke-width="2.99" stroke-linecap="round"/>
+<path d="M 579.9 225.7 Q 546.2 328.5 440.1 349.3" fill="none" stroke="#74c7ec" stroke-width="2.87" stroke-linecap="round"/>
+<path d="M 579.7 225.4 Q 506.3 385.2 338.0 435.9" fill="none" stroke="#74c7ec" stroke-width="3.24" stroke-linecap="round"/>
+<path d="M 592.3 235.2 Q 581.6 362.3 484.9 445.6" fill="none" stroke="#74c7ec" stroke-width="2.99" stroke-linecap="round"/>
+<path d="M 569.5 195.4 Q 513.5 233.0 462.5 188.7" fill="none" stroke="#74c7ec" stroke-width="2.99" stroke-linecap="round"/>
+<path d="M 425.0 479.4 Q 390.8 435.7 350.7 474.0" fill="none" stroke="#89dceb" stroke-width="3.11" stroke-linecap="round"/>
+<circle cx="165.9" cy="228.7" r="36.9" fill="none" stroke="#74c7ec" stroke-width="7.4"/>
+<circle cx="165.9" cy="228.7" r="27.6" fill="none" stroke="#74c7ec" stroke-width="7.4"/>
+<circle cx="165.9" cy="228.7" r="18.4" fill="none" stroke="#74c7ec" stroke-width="7.4"/>
+<circle cx="165.9" cy="228.7" r="9.2" fill="none" stroke="#74c7ec" stroke-width="7.4"/>
+<circle cx="304.3" cy="176.9" r="32.3" fill="none" stroke="#89dceb" stroke-width="8.6"/>
+<circle cx="304.3" cy="176.9" r="21.5" fill="none" stroke="#89dceb" stroke-width="8.6"/>
+<circle cx="304.3" cy="176.9" r="10.8" fill="none" stroke="#89dceb" stroke-width="8.6"/>
+<circle cx="420.2" cy="186.1" r="42.4" fill="#11111b"/>
+<circle cx="611.3" cy="198.0" r="35.8" fill="none" stroke="#74c7ec" stroke-width="9.6"/>
+<circle cx="611.3" cy="198.0" r="23.9" fill="none" stroke="#74c7ec" stroke-width="9.6"/>
+<circle cx="611.3" cy="198.0" r="11.9" fill="none" stroke="#74c7ec" stroke-width="9.6"/>
+<circle cx="173.5" cy="318.7" r="38.8" fill="#11111b"/>
+<circle cx="304.3" cy="338.2" r="39.2" fill="#1e1e2e"/>
+<circle cx="410.3" cy="375.6" r="39.7" fill="#11111b"/>
+<circle cx="585.7" cy="333.1" r="37.7" fill="#1e1e2e"/>
+<circle cx="158.6" cy="496.8" r="37.7" fill="#11111b"/>
+<circle cx="298.7" cy="470.2" r="44.7" fill="none" stroke="#89dceb" stroke-width="11.9"/>
+<circle cx="298.7" cy="470.2" r="29.8" fill="none" stroke="#89dceb" stroke-width="11.9"/>
+<circle cx="298.7" cy="470.2" r="14.9" fill="none" stroke="#89dceb" stroke-width="11.9"/>
+<circle cx="466.2" cy="482.4" r="41.3" fill="#89dceb"/>
+<circle cx="554.6" cy="443.4" r="35.0" fill="none" stroke="#11111b" stroke-width="9.3"/>
+<circle cx="554.6" cy="443.4" r="23.4" fill="none" stroke="#11111b" stroke-width="9.3"/>
+<circle cx="554.6" cy="443.4" r="11.7" fill="none" stroke="#11111b" stroke-width="9.3"/>
+<circle cx="180.4" cy="597.1" r="30.1" fill="none" stroke="#89dceb" stroke-width="12.1"/>
+<circle cx="180.4" cy="597.1" r="15.1" fill="none" stroke="#89dceb" stroke-width="12.1"/>
+</svg>

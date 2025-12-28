@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 774 774" width="774" height="774">
+  <rect width="100%" height="100%" fill="#f5e0dc"/>
+  <path d="M 414.5 316.6 Q 387.0 399.0 359.5 316.6" fill="none" stroke="#89b4fa" stroke-width="3.02" stroke-linecap="round"/>
+<path d="M 487.7 286.3 Q 565.2 281.8 569.7 204.3" fill="none" stroke="#89b4fa" stroke-width="3.02" stroke-linecap="round"/>
+<circle cx="604.2" cy="169.8" r="41.9" fill="none" stroke="#89b4fa" stroke-width="11.2"/>
+<circle cx="604.2" cy="169.8" r="27.9" fill="none" stroke="#89b4fa" stroke-width="11.2"/>
+<circle cx="604.2" cy="169.8" r="14.0" fill="none" stroke="#89b4fa" stroke-width="11.2"/>
+<circle cx="310.6" cy="316.6" r="41.9" fill="none" stroke="#89dceb" stroke-width="11.2"/>
+<circle cx="310.6" cy="316.6" r="27.9" fill="none" stroke="#89dceb" stroke-width="11.2"/>
+<circle cx="310.6" cy="316.6" r="14.0" fill="none" stroke="#89dceb" stroke-width="11.2"/>
+<circle cx="604.2" cy="463.4" r="36.7" fill="none" stroke="#45475a" stroke-width="9.8"/>
+<circle cx="604.2" cy="463.4" r="24.5" fill="none" stroke="#45475a" stroke-width="9.8"/>
+<circle cx="604.2" cy="463.4" r="12.2" fill="none" stroke="#45475a" stroke-width="9.8"/>
+<circle cx="457.4" cy="610.2" r="42.9" fill="#45475a"/>
+<circle cx="604.2" cy="316.6" r="34.3" fill="none" stroke="#89b4fa" stroke-width="13.7"/>
+<circle cx="604.2" cy="316.6" r="17.1" fill="none" stroke="#89b4fa" stroke-width="13.7"/>
+<circle cx="163.8" cy="610.2" r="42.9" fill="#89b4fa"/>
+<circle cx="457.4" cy="316.6" r="36.7" fill="none" stroke="#89b4fa" stroke-width="9.8"/>
+<circle cx="457.4" cy="316.6" r="24.5" fill="none" stroke="#89b4fa" stroke-width="9.8"/>
+<circle cx="457.4" cy="316.6" r="12.2" fill="none" stroke="#89b4fa" stroke-width="9.8"/>
+<circle cx="310.6" cy="610.2" r="42.9" fill="#45475a"/>
+<circle cx="310.6" cy="463.4" r="38.1" fill="none" stroke="#89dceb" stroke-width="7.6"/>
+<circle cx="310.6" cy="463.4" r="28.6" fill="none" stroke="#89dceb" stroke-width="7.6"/>
+<circle cx="310.6" cy="463.4" r="19.1" fill="none" stroke="#89dceb" stroke-width="7.6"/>
+<circle cx="310.6" cy="463.4" r="9.5" fill="none" stroke="#89dceb" stroke-width="7.6"/>
+</svg>
