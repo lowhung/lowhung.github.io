@@ -284,6 +284,7 @@
                 padding: 0.75rem;
                 transition: all 0.2s;
                 background-color: transparent;
+                cursor: pointer;
             }
 
             .art-item:hover {
@@ -303,6 +304,89 @@
                 color: #6c6f85;
                 font-family: "Roboto Mono", monospace;
                 text-align: center;
+            }
+
+            /* Lightbox */
+            .lightbox {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(220, 224, 232, 0.95);
+                z-index: 1000;
+                justify-content: center;
+                align-items: center;
+                padding: 2rem;
+            }
+
+            .lightbox.active {
+                display: flex;
+            }
+
+            .lightbox-content {
+                max-width: 90vw;
+                max-height: 90vh;
+                position: relative;
+            }
+
+            .lightbox-content img {
+                max-width: 100%;
+                max-height: 85vh;
+                display: block;
+                border: 1px solid #acb0be;
+            }
+
+            .lightbox-label {
+                text-align: center;
+                margin-top: 1rem;
+                font-size: 0.875rem;
+                color: #5c5f77;
+                font-family: "Roboto Mono", monospace;
+            }
+
+            .lightbox-close {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                font-size: 2rem;
+                color: #5c5f77;
+                cursor: pointer;
+                background: none;
+                border: none;
+                padding: 0.5rem;
+                line-height: 1;
+                transition: color 0.2s;
+            }
+
+            .lightbox-close:hover {
+                color: #4c4f69;
+            }
+
+            .lightbox-nav {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 2rem;
+                color: #5c5f77;
+                cursor: pointer;
+                background: none;
+                border: none;
+                padding: 1rem;
+                transition: color 0.2s;
+            }
+
+            .lightbox-nav:hover {
+                color: #4c4f69;
+            }
+
+            .lightbox-prev {
+                left: 1rem;
+            }
+
+            .lightbox-next {
+                right: 1rem;
             }
 
             footer {
@@ -534,6 +618,104 @@
                         />
                         <p class="art-label">seed: 207</p>
                     </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_3_1766875300502.svg"
+                            alt="engram #3"
+                        />
+                        <p class="art-label">seed: 3</p>
+                    </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_7_1766875336688.svg"
+                            alt="engram #7"
+                        />
+                        <p class="art-label">seed: 7</p>
+                    </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_14_1766875400011.svg"
+                            alt="engram #14"
+                        />
+                        <p class="art-label">seed: 14</p>
+                    </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_23_1766875481434.svg"
+                            alt="engram #23"
+                        />
+                        <p class="art-label">seed: 23</p>
+                    </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_44_1766875671386.svg"
+                            alt="engram #44"
+                        />
+                        <p class="art-label">seed: 44</p>
+                    </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_63_1766875843227.svg"
+                            alt="engram #63"
+                        />
+                        <p class="art-label">seed: 63</p>
+                    </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_88_1766876069352.svg"
+                            alt="engram #88"
+                        />
+                        <p class="art-label">seed: 88</p>
+                    </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_105_1766876223116.svg"
+                            alt="engram #105"
+                        />
+                        <p class="art-label">seed: 105</p>
+                    </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_133_1766876621035.svg"
+                            alt="engram #133"
+                        />
+                        <p class="art-label">seed: 133</p>
+                    </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_156_1766878229448.svg"
+                            alt="engram #156"
+                        />
+                        <p class="art-label">seed: 156</p>
+                    </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_177_1766880607289.svg"
+                            alt="engram #177"
+                        />
+                        <p class="art-label">seed: 177</p>
+                    </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_195_1766880770084.svg"
+                            alt="engram #195"
+                        />
+                        <p class="art-label">seed: 195</p>
+                    </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_211_1766880914805.svg"
+                            alt="engram #211"
+                        />
+                        <p class="art-label">seed: 211</p>
+                    </div>
+                    <div class="art-item">
+                        <img
+                            src="art/engram_218_1766880978123.svg"
+                            alt="engram #218"
+                        />
+                        <p class="art-label">seed: 218</p>
+                    </div>
                 </div>
             </main>
 
@@ -542,5 +724,78 @@
                 <p>built with care</p>
             </footer>
         </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+            <button class="lightbox-nav lightbox-prev" id="lightbox-prev">
+                &larr;
+            </button>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="" />
+                <p class="lightbox-label" id="lightbox-label"></p>
+            </div>
+            <button class="lightbox-nav lightbox-next" id="lightbox-next">
+                &rarr;
+            </button>
+        </div>
+
+        <script>
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const lightboxLabel = document.getElementById("lightbox-label");
+            const artItems = document.querySelectorAll(".art-item");
+            let currentIndex = 0;
+
+            const images = Array.from(artItems).map((item) => ({
+                src: item.querySelector("img").src,
+                label: item.querySelector(".art-label").textContent,
+            }));
+
+            function openLightbox(index) {
+                currentIndex = index;
+                lightboxImg.src = images[index].src;
+                lightboxLabel.textContent = images[index].label;
+                lightbox.classList.add("active");
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove("active");
+                document.body.style.overflow = "";
+            }
+
+            function navigate(direction) {
+                currentIndex =
+                    (currentIndex + direction + images.length) % images.length;
+                lightboxImg.src = images[currentIndex].src;
+                lightboxLabel.textContent = images[currentIndex].label;
+            }
+
+            artItems.forEach((item, index) => {
+                item.addEventListener("click", () => openLightbox(index));
+            });
+
+            document
+                .getElementById("lightbox-close")
+                .addEventListener("click", closeLightbox);
+            document
+                .getElementById("lightbox-prev")
+                .addEventListener("click", () => navigate(-1));
+            document
+                .getElementById("lightbox-next")
+                .addEventListener("click", () => navigate(1));
+
+            lightbox.addEventListener("click", (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (!lightbox.classList.contains("active")) return;
+                if (e.key === "Escape") closeLightbox();
+                if (e.key === "ArrowLeft") navigate(-1);
+                if (e.key === "ArrowRight") navigate(1);
+            });
+        </script>
     </body>
 </html>
