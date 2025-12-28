@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 774 774" width="774" height="774">
+  <rect width="100%" height="100%" fill="#eba0ac"/>
+  <path d="M 400.4 259.8 Q 357.0 431.8 395.5 605.0" fill="none" stroke="#74c7ec" stroke-width="2.75" stroke-linecap="round"/>
+<path d="M 403.8 259.6 Q 323.3 310.1 414.7 336.3" fill="none" stroke="#74c7ec" stroke-width="2.75" stroke-linecap="round"/>
+<path d="M 195.4 471.6 Q 114.5 317.1 221.0 178.8" fill="none" stroke="#74c7ec" stroke-width="5.40" stroke-linecap="round"/>
+<path d="M 380.6 227.5 Q 295.3 235.1 249.5 162.8" fill="none" stroke="#74c7ec" stroke-width="6.50" stroke-linecap="round"/>
+<circle cx="418.1" cy="360.1" r="19.2" fill="none" stroke="#94e2d5" stroke-width="7.7"/>
+<circle cx="418.1" cy="360.1" r="9.6" fill="none" stroke="#94e2d5" stroke-width="7.7"/>
+<circle cx="351.1" cy="458.5" r="19.2" fill="none" stroke="#94e2d5" stroke-width="5.1"/>
+<circle cx="351.1" cy="458.5" r="12.8" fill="none" stroke="#94e2d5" stroke-width="5.1"/>
+<circle cx="351.1" cy="458.5" r="6.4" fill="none" stroke="#94e2d5" stroke-width="5.1"/>
+<circle cx="250.0" cy="303.1" r="19.2" fill="none" stroke="#94e2d5" stroke-width="5.1"/>
+<circle cx="250.0" cy="303.1" r="12.8" fill="none" stroke="#94e2d5" stroke-width="5.1"/>
+<circle cx="250.0" cy="303.1" r="6.4" fill="none" stroke="#94e2d5" stroke-width="5.1"/>
+<circle cx="400.7" cy="237.4" r="22.4" fill="#74c7ec"/>
+<circle cx="493.2" cy="475.0" r="22.4" fill="#b4befe"/>
+<circle cx="193.5" cy="494.0" r="19.2" fill="none" stroke="#74c7ec" stroke-width="5.1"/>
+<circle cx="193.5" cy="494.0" r="12.8" fill="none" stroke="#74c7ec" stroke-width="5.1"/>
+<circle cx="193.5" cy="494.0" r="6.4" fill="none" stroke="#74c7ec" stroke-width="5.1"/>
+<circle cx="223.5" cy="149.9" r="29.0" fill="#b4befe"/>
+<circle cx="580.5" cy="253.7" r="17.9" fill="none" stroke="#b4befe" stroke-width="7.2"/>
+<circle cx="580.5" cy="253.7" r="9.0" fill="none" stroke="#b4befe" stroke-width="7.2"/>
+<circle cx="395.2" cy="629.0" r="24.1" fill="#74c7ec"/>
+</svg>
