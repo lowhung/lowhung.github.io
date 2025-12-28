@@ -159,9 +159,9 @@
                 position: absolute;
                 right: 0;
                 top: 100%;
-                margin-top: 0.5rem;
-                background-color: #e6e9ef;
-                border: 1px solid #acb0be;
+                padding-top: 0.5rem;
+                background-color: transparent;
+                border: none;
                 border-radius: 0;
                 box-shadow: none;
                 display: none;
@@ -169,14 +169,16 @@
                 min-width: 140px;
             }
 
+            .menu-dropdown ul {
+                background-color: #e6e9ef;
+                border: 1px solid #acb0be;
+                list-style: none;
+                padding: 0;
+            }
+
             #menu-toggle:checked ~ .menu-dropdown,
             .menu-container:hover .menu-dropdown {
                 display: block;
-            }
-
-            .menu-dropdown ul {
-                list-style: none;
-                padding: 0;
             }
 
             .menu-dropdown a {
@@ -865,8 +867,8 @@
                         <ul>
                             <li><a href="/">home</a></li>
                             <li><a href="#projects">projects</a></li>
-                            <li><a href="#work">work</a></li>
                             <li><a href="#opensource">open source</a></li>
+                            <li><a href="#work">work</a></li>
                         </ul>
                     </div>
                 </div>
