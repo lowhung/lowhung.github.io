@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 774 774" width="774" height="774">
+  <rect width="100%" height="100%" fill="#f5e0dc"/>
+  <path d="M 451.0 370.2 Q 385.3 424.1 312.3 380.6" fill="none" stroke="#b4befe" stroke-width="4.50" stroke-linecap="round"/>
+<path d="M 482.4 317.1 Q 425.5 283.6 437.1 218.6" fill="none" stroke="#b4befe" stroke-width="4.52" stroke-linecap="round"/>
+<path d="M 232.5 595.2 Q 288.4 617.5 344.2 595.2" fill="none" stroke="#b4befe" stroke-width="4.37" stroke-linecap="round"/>
+<path d="M 222.6 563.7 Q 374.8 527.9 460.6 397.2" fill="none" stroke="#b4befe" stroke-width="4.01" stroke-linecap="round"/>
+<path d="M 437.9 218.2 Q 467.3 384.0 578.5 510.4" fill="none" stroke="#eba0ac" stroke-width="4.44" stroke-linecap="round"/>
+<path d="M 550.6 566.1 Q 491.7 508.7 458.8 584.1" fill="none" stroke="#eba0ac" stroke-width="4.51" stroke-linecap="round"/>
+<path d="M 584.2 207.1 Q 591.4 415.3 426.6 542.9" fill="none" stroke="#eba0ac" stroke-width="4.59" stroke-linecap="round"/>
+<path d="M 583.5 206.8 Q 643.9 305.5 528.9 317.7" fill="none" stroke="#eba0ac" stroke-width="4.54" stroke-linecap="round"/>
+<path d="M 312.3 380.6 Q 384.9 418.7 451.0 370.2" fill="none" stroke="#eba0ac" stroke-width="4.19" stroke-linecap="round"/>
+<path d="M 293.0 346.5 Q 371.6 302.7 386.3 214.0" fill="none" stroke="#eba0ac" stroke-width="4.68" stroke-linecap="round"/>
+<path d="M 344.2 595.2 Q 288.4 535.9 232.5 595.2" fill="none" stroke="#181825" stroke-width="3.47" stroke-linecap="round"/>
+<path d="M 192.9 208.9 Q 255.2 260.9 248.8 341.7" fill="none" stroke="#a6e3a1" stroke-width="4.55" stroke-linecap="round"/>
+<path d="M 217.4 172.1 Q 291.0 116.2 364.5 172.1" fill="none" stroke="#a6e3a1" stroke-width="4.66" stroke-linecap="round"/>
+<path d="M 204.6 196.8 Q 424.3 314.8 562.9 522.1" fill="none" stroke="#94e2d5" stroke-width="4.28" stroke-linecap="round"/>
+<circle cx="266.6" cy="384.0" r="40.8" fill="none" stroke="#eba0ac" stroke-width="8.2"/>
+<circle cx="266.6" cy="384.0" r="30.6" fill="none" stroke="#eba0ac" stroke-width="8.2"/>
+<circle cx="266.6" cy="384.0" r="20.4" fill="none" stroke="#eba0ac" stroke-width="8.2"/>
+<circle cx="266.6" cy="384.0" r="10.2" fill="none" stroke="#eba0ac" stroke-width="8.2"/>
+<circle cx="415.7" cy="172.1" r="43.9" fill="none" stroke="#eba0ac" stroke-width="11.7"/>
+<circle cx="415.7" cy="172.1" r="29.2" fill="none" stroke="#eba0ac" stroke-width="11.7"/>
+<circle cx="415.7" cy="172.1" r="14.6" fill="none" stroke="#eba0ac" stroke-width="11.7"/>
+<circle cx="402.1" cy="595.2" r="51.4" fill="none" stroke="#181825" stroke-width="10.3"/>
+<circle cx="402.1" cy="595.2" r="38.6" fill="none" stroke="#181825" stroke-width="10.3"/>
+<circle cx="402.1" cy="595.2" r="25.7" fill="none" stroke="#181825" stroke-width="10.3"/>
+<circle cx="402.1" cy="595.2" r="12.9" fill="none" stroke="#181825" stroke-width="10.3"/>
+<circle cx="600.6" cy="556.3" r="51.0" fill="#eba0ac"/>
+<circle cx="505.0" cy="366.2" r="48.1" fill="none" stroke="#b4befe" stroke-width="9.6"/>
+<circle cx="505.0" cy="366.2" r="36.1" fill="none" stroke="#b4befe" stroke-width="9.6"/>
+<circle cx="505.0" cy="366.2" r="24.0" fill="none" stroke="#b4befe" stroke-width="9.6"/>
+<circle cx="505.0" cy="366.2" r="12.0" fill="none" stroke="#b4befe" stroke-width="9.6"/>
+<circle cx="177.5" cy="172.1" r="34.2" fill="none" stroke="#a6e3a1" stroke-width="9.1"/>
+<circle cx="177.5" cy="172.1" r="22.8" fill="none" stroke="#a6e3a1" stroke-width="9.1"/>
+<circle cx="177.5" cy="172.1" r="11.4" fill="none" stroke="#a6e3a1" stroke-width="9.1"/>
+<circle cx="600.6" cy="172.1" r="38.6" fill="#eba0ac"/>
+<circle cx="177.5" cy="595.2" r="48.9" fill="none" stroke="#b4befe" stroke-width="9.8"/>
+<circle cx="177.5" cy="595.2" r="36.7" fill="none" stroke="#b4befe" stroke-width="9.8"/>
+<circle cx="177.5" cy="595.2" r="24.5" fill="none" stroke="#b4befe" stroke-width="9.8"/>
+<circle cx="177.5" cy="595.2" r="12.2" fill="none" stroke="#b4befe" stroke-width="9.8"/>
+<circle cx="177.5" cy="172.1" r="36.6" fill="#94e2d5"/>
+</svg>
